@@ -1,8 +1,8 @@
 mod hallo;
-
+mod variabel;
 fn main() {
     hallo::sapa_dunia();
-    hallo::sapa_dunia();
+    println!("{}", variabel::variable())
 }
 
 #[test]
