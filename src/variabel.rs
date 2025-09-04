@@ -1,4 +1,5 @@
 pub fn variable() -> &'static str {
-    let nama: &'static str = "siam Al Sobari";
+    let mut nama: &'static str = "siam Al Sobari";
+    nama = "siam";
     nama
 }
