@@ -1,7 +1,3 @@
-pub fn sapa_dunia() {
-    println!("Hallo world");
+pub fn sapa_dunia() -> &'static str {
+    return "Hallo dunia";
 }
-
-// fn private_sapa_dunia() {
-//     println!("Hallo world private fn")
-// }
