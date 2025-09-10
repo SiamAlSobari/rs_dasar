@@ -1,3 +1,4 @@
+mod control_flow;
 mod hallo;
 mod numeric;
 mod tuple;
@@ -7,6 +8,7 @@ fn main() {
     println!("Ini dari mod {}", variabel::variable());
     numeric::numeric_operation();
     tuple::rust_tuple();
+    control_flow::if_stat();
 }
 
 #[test]
