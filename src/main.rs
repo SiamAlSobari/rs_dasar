@@ -38,3 +38,13 @@ fn string_type() {
         kelas, kelas_2
     )
 }
+
+#[test]
+fn return_string() {
+    let nama: String = String::from("Siam Al Sobariiiiiiiiiiiiiiiiiiiiiii");
+    rs(nama);
+}
+
+fn rs(str: String) {
+    println!("{}", str)
+}
