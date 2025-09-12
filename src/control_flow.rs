@@ -1,4 +1,4 @@
-pub fn if_stat() {
+pub fn _if_stat() {
     // let num = 3;
     // if num != 0 {
     //     println!("{}", num)
@@ -17,4 +17,12 @@ pub fn if_stat() {
     } else {
         println!("lu siapa")
     };
+}
+
+pub fn match_stat() {
+    let nama = "siam";
+    match nama {
+        "siam" => println!("Nama dia adalah {}", { nama }),
+        _ => println!("Nama tak diketahui"),
+    }
 }

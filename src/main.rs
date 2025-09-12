@@ -8,7 +8,7 @@ fn main() {
     println!("Ini dari mod {}", variabel::variable());
     numeric::numeric_operation();
     tuple::rust_tuple();
-    control_flow::if_stat();
+    control_flow::match_stat();
 }
 
 #[test]
