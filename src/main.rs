@@ -1,3 +1,4 @@
+mod arr;
 mod control_flow;
 mod hallo;
 mod heap_stack;
@@ -8,6 +9,7 @@ mod variabel;
 fn main() {
     ownership::owner();
     heap_stack::func_a();
+    arr::array();
 }
 
 #[test]
@@ -70,10 +72,25 @@ struct User {
 #[test]
 fn struct_test() {
     let mut user1 = User {
-        name: String::from("Siam"),
+        name: String::from("Siam Pemakan Kecoa"),
         umur: 16,
         email: String::from("Kanjud"),
     };
     user1.email = String::from("yammD@gmail.com");
     println!("{:?}", user1)
+}
+
+fn bagi(a: i32, b: i32) -> Result<i32, String> {
+    match b {
+        0 => Err(String::from("Ga bisa di bagi")),
+        _ => Ok(a / b),
+    }
+}
+
+#[test]
+fn test_bagi() {
+    match bagi(10, 0) {
+        Ok(hasil) => println!("Hasil {hasil}"),
+        Err(err) => println!("{err}"),
+    }
 }
