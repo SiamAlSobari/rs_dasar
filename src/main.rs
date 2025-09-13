@@ -23,8 +23,7 @@ fn test() {
 
 #[test]
 fn string() {
-    let mut binatang: &str = "Kucing";
-    binatang = "Monyet";
+    let binatang: &str = "Kucing";
     println!("Binatang ini adalah {}", binatang)
 }
 
@@ -39,12 +38,42 @@ fn string_type() {
     )
 }
 
-#[test]
-fn return_string() {
-    let nama: String = String::from("Siam Al Sobariiiiiiiiiiiiiiiiiiiiiii");
-    rs(nama);
+// #[test]
+// fn return_string() {
+//     let nama: String = String::from("Siam Al Sobariiiiiiiiiiiiiiiiiiiiiii");
+//     rs(nama);
+// }
+//
+// fn rs(str: String) {
+//     println!("{}", str)
+// }
+//
+fn full_name(first_name: String, last_name: String) -> String {
+    format!("{}{}", first_name, last_name)
 }
 
-fn rs(str: String) {
-    println!("{}", str)
+#[test]
+fn test_name() {
+    let first_name: String = String::from("Siam");
+    let last_name: String = String::from("Al Sobari");
+
+    let name = full_name(first_name, last_name);
+    println!("{}", name)
+}
+#[derive(Debug)]
+struct User {
+    name: String,
+    umur: i32,
+    email: String,
+}
+
+#[test]
+fn struct_test() {
+    let mut user1 = User {
+        name: String::from("Siam"),
+        umur: 16,
+        email: String::from("Kanjud"),
+    };
+    user1.email = String::from("yammD@gmail.com");
+    println!("{:?}", user1)
 }
