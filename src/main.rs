@@ -91,6 +91,25 @@ fn bagi(a: i32, b: i32) -> Result<i32, String> {
 fn test_bagi() {
     match bagi(10, 0) {
         Ok(hasil) => println!("Hasil {hasil}"),
-        Err(err) => println!("{err}"),
+        Err(err) => println!("{err} "),
     }
+}
+
+#[test]
+fn test_refrence() {
+    let jenis_kelamin: String = String::from("Laki-Laki");
+    let jk = &jenis_kelamin;
+    println!("{jenis_kelamin} dan {jk}")
+}
+
+fn cetak(karakter: &mut String) {
+    karakter.push_str("Thomas andree");
+    println!("{karakter}")
+}
+
+#[test]
+fn test_refrence2() {
+    let mut karak: String = String::from("Sung Jin Woo");
+    cetak(&mut karak);
+    println!("{}", karak)
 }
